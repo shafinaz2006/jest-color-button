@@ -4,14 +4,17 @@ const ColorButton = () => {
   const [color, setColor] = useState("red");
   const [btnColor, setBtnColor] = useState("red");
   const [btnDisabled, setBtnDisabled] = useState(false);
+
   const changeColor = () => {
     setColor(color === "red" ? "blue" : "red");
     setBtnColor(color === "red" ? "blue" : "red");
   };
+
   const disableButton = () => {
     setBtnDisabled(!btnDisabled);
     setColor(btnDisabled ? btnColor : "gray");
   };
+
   return (
     <div>
       <h3>Button colors are blue and red</h3>

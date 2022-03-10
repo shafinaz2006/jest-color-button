@@ -4,18 +4,20 @@ export function replaceCamelWithSpaces(colorName){
   return colorName.replace(/\B([A-Z])\B/g, ' $1');
 }
 const CamelCaseColorButton = () => {
-
   const [color, setColor] = useState("MediumVioletRed");
   const [btnColor, setBtnColor] = useState("MediumVioletRed");
   const [btnDisabled, setBtnDisabled] = useState(false);
+
   const changeColor = () => {
     setColor(color === "MediumVioletRed" ? "MidnightBlue" : "MediumVioletRed");
     setBtnColor(color === "MediumVioletRed" ? "MidnightBlue" : "MediumVioletRed");
   };
+
   const disableButton = () => {
     setBtnDisabled(!btnDisabled);
     setColor(btnDisabled ? btnColor : "gray");
   };
+  
   return (
     <div>
       <h3>Button colors have camel case</h3>
